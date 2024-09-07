@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday My Love</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <audio id="backgroundMusic" autoplay loop>
+        <source src="/Codewithharry/its-your-birthday-song.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+    <div class="container" id="cont">
+        <div class="card">
+            <div class="header">
+                <h1>Happy Birthday, My Love!</h1>
+            </div>
+            <div class="content">
+                <p>To the most beautiful person in my life,</p>
+                <p>On this special day, I want to celebrate you and all the joy you bring into my life. You are my sunshine on rainy days, my light in the dark, and my partner in every dream. Today is all about you, and I hope it’s filled with love, laughter, and wonderful memories.</p>
+                <p>I love you more than words can say, and I am so grateful to have you in my life. Happy Birthday, my love!</p>
+                <p class="signature">- Forever Yours, [Tera Aadi]</p>
+            </div>
+            <div class="footer">
+                <button class="btn"><a href="/Codewithharry/index3.html" style="text-decoration: none; color: #fff">Meassage for you !!! </a></button>
+            </div>
+        </div>
+    </div>
+    
+    <script>
+        // JavaScript to handle button click and redirect to the main page
+        document.getElementsByClassName("btn").addEventListener("click", function () {
+            document.body.style.transition = "opacity 0.5s ease-out";
+            document.body.style.opacity = 0;
+            setTimeout(function () {
+                window.location.href = "index3.html";
+            }, 500);
+        });
+
+        document.addEventListener('DOMContentLoaded', () => {
+            const background = document.getElementById('cont');
+            const music = document.getElementById('backgroundMusic');
+        
+            background.addEventListener('mouseover', () => {
+                music.play().catch((error) => {
+                    console.error('Playback failed:', error);
+                });
+            });
+            background.addEventListener('mouseout', () => {
+                music.pause();
+            });
+        
+            
+        });
+    </script>
+</body>
+</html>

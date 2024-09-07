@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Landing Page</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="landing-container">
+        <div class="welcome-message">
+            <h1>Welcome to the Special Day Celebration</h1>
+            <p>Get ready for a heartfelt Message</p>
+            <a href="index.html" class="cta-button">Click here to get your message</a>
+        </div>
+        <div class="animation-container">
+            <div class="balloon balloon1"></div>
+            <div class="balloon balloon2"></div>
+            <div class="balloon balloon3"></div>
+        </div>
+        <div class="glitter-shower"></div>
+        <div class="confetti"></div>
+    </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const confettiContainer = document.querySelector('.confetti');
+            
+            for (let i = 0; i < 100; i++) {
+                const confettiPiece = document.createElement('div');
+                confettiPiece.className = 'confetti-piece';
+                confettiPiece.style.left = `${Math.random() * 100}vw`;
+                confettiPiece.style.top = `${Math.random() * -100}vh`;
+                confettiPiece.style.width = `${Math.random() * 10 + 5}px`;
+                confettiPiece.style.height = `${Math.random() * 10 + 5}px`;
+                confettiPiece.style.backgroundColor = ['#ff6f61', '#ff9a9e', '#f9d0c4'][Math.floor(Math.random() * 3)];
+                confettiContainer.appendChild(confettiPiece);
+            }
+        });
+        
+    </script>
+</body>
+</html>

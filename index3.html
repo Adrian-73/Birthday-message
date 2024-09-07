@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Special Message for You</title>
+    <link rel="stylesheet" href="stylesheet.css">
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Montserrat:wght@400;700&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <audio id="backgroundMusic" autoplay loop>
+        <source src="/Codewithharry/Perfect Ed Sheeran-(PagalSongs.Com.IN).mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+    <div class="message-container">
+        <div class="message-card">
+            <h1>🎉Special Meassage to You 🎉</h1>
+            <p class="opening">Dear [Tavishi Sharma],</p>
+            <p>Although I can’t wait to share my last name with you, please know that I love your name just as much as I
+                love you. You have brought so much light and joy into my life, and you are so more than I could ever ask
+                for from the heavens above. Along with celebrating your birthday, today also marks the third anniversary
+                of the day I confessed my love to you. I want you to know that not a single day has passed where I’ve
+                regretted that decision.
+
+                No matter how long it takes—whether it’s three years, thirty years, or even three lifetimes—it will
+                always be you. You are my forever, today and always.
+
+            </p>
+            <p>I know we have our differences and, in many ways, we're complete opposites. But isn’t that part of the beauty of it? You sometimes say that I put in too much effort, but for you, I would walk through fire without a second thought.
+
+                I understand that I haven’t always been the person you could confide in without fear of judgment or offending me. I want you to know that your presence overwhelms me in the most wonderful way, and sometimes, I act impulsively because I am so in awe of you.
+                
+                I’m grateful for every moment with you, and even though I stumble, my heart is always in the right place.</p>
+            <p>As you celebrate another year of life, I want you to know how deeply loved you are. Every smile you
+                share, every laugh you create, every kind word you speak—it all leaves a lasting impact on those
+                fortunate enough to know you.</p>
+            <p>Thank you for being the incredible person that you are. Here's to many more birthdays filled with love,
+                laughter, and cherished moments. Happy Birthday, my love. You are my everything.</p>
+            <p class="closing">Always Yours, Tera Aadi</p>
+        </div>
+    </div>
+
+    <!-- <div class="footer">
+        <button id="backButton" class="btn">Back to the Main Page</button>
+    </div> -->
+
+    <script>
+        // JavaScript to handle button click and redirect to the main page
+        document.getElementById("backButton").addEventListener("click", function () {
+            document.body.style.transition = "opacity 0.5s ease-out";
+            document.body.style.opacity = 0;
+            setTimeout(function () {
+                window.location.href = "index.html";
+            }, 500);
+        });
+
+        document.addEventListener('DOMContentLoaded', () => {
+            const background = document.getElementById('cont');
+            const music = document.getElementById('backgroundMusic');
+        
+            background.addEventListener('mouseover', () => {
+                music.play().catch((error) => {
+                    console.error('Playback failed:', error);
+                });
+            });
+            background.addEventListener('mouseout', () => {
+                music.pause();
+            });
+        
+            
+        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,226 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    height: 100%;
+    font-family: 'Arial', sans-serif;
+}
+
+.landing-container {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    background: linear-gradient(to right, #ff9a9e, #fad0c4);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #fff;
+    overflow: hidden;
+}
+
+.welcome-message {
+    z-index: 2;
+}
+
+.welcome-message h1 {
+    font-size: 4em;
+    margin-bottom: 0.5em;
+    animation: fadeInUp 2s ease-out;
+}
+
+.welcome-message p {
+    font-size: 1.8em;
+    margin-bottom: 1em;
+    animation: fadeInUp 3s ease-out;
+}
+
+.cta-button {
+    display: inline-block;
+    padding: 1em 2.5em;
+    font-size: 1.4em;
+    color: #fff;
+    background: #ff6f61;
+    border: none;
+    border-radius: 50px;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.3s ease;
+    animation: bounceIn 2s ease-out;
+}
+
+.cta-button:hover {
+    background: #ff3d30;
+    transform: scale(1.1);
+}
+
+.animation-container {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+}
+
+.balloon {
+    position: absolute;
+    width: 100px;
+    height: 130px;
+    background: radial-gradient(circle, #ff9a9e, #ff6f61);
+    border-radius: 50% 50% 45% 45%;
+    bottom: -150px;
+    animation: float 6s ease-in-out infinite;
+}
+
+.balloon:after {
+    content: "";
+    position: absolute;
+    width: 2px;
+    height: 100px;
+    background: #333;
+    left: 50%;
+    bottom: -100px;
+    transform: translateX(-50%);
+}
+
+.balloon1 {
+    left: 20%;
+    animation-delay: 0s;
+}
+
+.balloon2 {
+    left: 50%;
+    animation-delay: 1.5s;
+}
+
+.balloon3 {
+    left: 80%;
+    animation-delay: 3s;
+}
+
+.glitter-shower {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    overflow: hidden;
+    z-index: 1;
+    background: rgba(255, 255, 255, 0.2);
+    animation: glitter 1.5s linear infinite;
+}
+
+.confetti {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 0;
+    overflow: hidden;
+}
+
+.confetti::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.confetti::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.confetti-piece {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background-color: #ff6f61;
+    border-radius: 50%;
+    opacity: 0.8;
+    animation: confettiFall 3s ease-in-out infinite;
+}
+
+.confetti-piece:nth-child(2) {
+    background-color: #ff9a9e;
+    animation-delay: 0.5s;
+}
+
+.confetti-piece:nth-child(3) {
+    background-color: #f9d0c4;
+    animation-delay: 1s;
+}
+
+@keyframes float {
+    0% {
+        transform: translateY(0);
+        opacity: 0.8;
+    }
+    50% {
+        transform: translateY(-200px);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 0.8;
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes bounceIn {
+    0% {
+        opacity: 0;
+        transform: scale(0.5);
+    }
+    50% {
+        opacity: 1;
+        transform: scale(1.2);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes glitter {
+    0% {
+        opacity: 0.2;
+    }
+    50% {
+        opacity: 0.8;
+    }
+    100% {
+        opacity: 0.2;
+    }
+}
+
+@keyframes confettiFall {
+    0% {
+        transform: translateY(-100%) rotate(0deg);
+    }
+    100% {
+        transform: translateY(100vh) rotate(360deg);
+    }
+}
